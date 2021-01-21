@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Вилена Никитчук](https://up.htmlacademy.ru/htmlcss/30/user/1437099).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Котов](https://htmlacademy.ru/profile/eugene_kotov).
 
 ---
 
