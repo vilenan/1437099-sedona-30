@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>сайт поиска жилья в городе Седона</title>
+</head>
 
-  </body>
+<body>
+  <header>
+    <nav>
+      <a><img src="https://via.placeholder.com/150x100" alt="логотип"></a>
+      <ul>
+        <li><a href="blank.html">Информация</a></li>
+        <li><a href="blank.html">Фото и видео</a></li>
+        <li><a href="blank.html">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>О достопримечательностях Седоны</h1>
+    <div class="promo">
+      <img src="https://via.placeholder.com/150x100" alt="пейзаж в окрестностях Седоны">
+      <p>Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    </div>
+    <div class="town">
+      <h2>настоящий городок</h2>
+      <span>— №1 —</span>
+      <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+      <img src="https://via.placeholder.com/150x100" alt="домики в Седоне">
+      <div class="town-features">
+        <ul>
+          <li>
+            <h3>Жильё</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li>
+            <h3>Еда</h3>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li>
+            <h3>Сувениры</h3>
+            <p>Не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bridge">
+      <h2>там есть мост дьявола</h2>
+      <span>— №2 —</span>
+      <p>да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      <img src="https://via.placeholder.com/150x100" alt="мост дьявола в окрестностях Седоны">
+    </div>
+    <div class="rest_advantages">
+      <div>
+        <h2>небольшая площадь</h2>
+        <span>— №3 —</span>
+        <p>все достопримечательности находятся очень близко</p>
+      </div>
+      <div>
+        <h2>красивая дорога</h2>
+        <span>— №4 —</span>
+        <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+      </div>
+      <div>
+        <h2>мало туристов</h2>
+        <span>— №5 —</span>
+        <p>большинство едет в гранд каньон и толпится там</p>
+      </div>
+    </div>
+    <div>
+      <h2>Заинтересовались?</h2>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <img src="https://via.placeholder.com/150x100" alt="карта">
+    </div>
+  </main>
+  <footer>
+    <div>
+      <p>#visitSEDONA</p>
+      <p>ТЕЛ: +7(495) 666-01-66</p>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#"><span>Твиттер</span></a></li>
+        <li><a href="#"><span>Фейсбук</span></a></li>
+        <li><a href="#"><span>Ютуб</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p>Website by</p> 
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="https://via.placeholder.com/150x100" alt="логотип HTML Академии">
+      </a>
+    </div>
+  </footer>
+  <section>
+    <h2>форма поиска жилья в Седоне</h2>
+    <button type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+    <form action="https://echo.htmlacademy.ru/courses" method="get">
+      <label for="date-in_field">Дата заезда:</label>
+      <input id="date-in_field" type="date" name="date-in" value ="2017-04-24">
+      <label for="date-out_field">Дата выезда:</label>
+      <input id="date-out_field" type="date" name="date-out" value ="2017-07-04">
+      <label for="adults_group_field">Взрослые:</label>
+      <input type="number" id="adults_group_field" min="1" max="10" value="2">
+      <label for="children_group_field">Дети:</label>
+      <input type="number" id="children_group_field" min="1" max="10" value="0">
+      <button type="submit">Найти</button>
+    </form>
+  </section>
+</body>
 </html>
