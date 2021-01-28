@@ -4,12 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>сайт поиска жилья в городе Седона</title>
+  <link rel="icon" href="favicon.ico"> 
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.png">
+  <link rel="manifest" href="manifest.webmanifest"> 
 </head>
 
 <body>
   <header>
     <nav>
-      <a><img src="https://via.placeholder.com/150x100" alt="логотип"></a>
+      <a><img src="img/logo.png" width="138" height="70" alt="логотип City of Sedona"></a>
       <ul>
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
@@ -20,18 +25,27 @@
   </header>
   <main>
     <h1>О достопримечательностях Седоны</h1>
+
+    <div class="welcome">
+      <img src="img/welcome.svg" width="457" height="351" alt="welcome to the gorgeous sedona">
+    </div>
+
     <div class="promo">
-      <img src="https://via.placeholder.com/150x100" alt="пейзаж в окрестностях Седоны">
       <p>Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </div>
+
     <div class="town">
-      <h2>настоящий городок</h2>
-      <span>— №1 —</span>
-      <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-      <img src="https://via.placeholder.com/150x100" alt="домики в Седоне">
-     
+      <div>
+        <h2>настоящий городок</h2>
+        <span>— №1 —</span>
+        <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+      </div>
+      <div>
+        <img src="img/town_1.jpg" width="800" height="256" alt="домики в Седоне">
+      </div>
     </div>
+
     <div class="town-features">
       <ul>
         <li>
@@ -48,12 +62,18 @@
         </li>
       </ul>
     </div>
+
     <div class="bridge">
-      <h2>там есть мост дьявола</h2>
-      <span>— №2 —</span>
-      <p>да, по нему можно пройти! Если конечно вы осмелитесь</p>
-      <img src="https://via.placeholder.com/150x100" alt="мост дьявола в окрестностях Седоны">
+      <div>
+        <h2>там есть мост дьявола</h2>
+        <span>— №2 —</span>
+        <p>да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      </div>
+      <div>
+        <img src="img/bridge_2.jpg" width="800" height="256" alt="мост дьявола в окрестностях Седоны">
+      </div>
     </div>
+
     <div class="rest_advantages">
       <div>
         <h2>небольшая площадь</h2>
@@ -71,10 +91,14 @@
         <p>большинство едет в гранд каньон и толпится там</p>
       </div>
     </div>
+
     <div>
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <img src="https://via.placeholder.com/150x100" alt="карта">
+      <button type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+    </div>
+    <div>
+      <img src="img/map.png" width="1199" height="594" alt="карта">
     </div>
   </main>
   <footer>
@@ -84,26 +108,49 @@
     </div>
     <div>
       <ul>
-        <li><a href="#"><span>Твиттер</span></a></li>
-        <li><a href="#"><span>Фейсбук</span></a></li>
-        <li><a href="#"><span>Ютуб</span></a></li>
+        <li>
+          <a href="#">
+            <span>Твиттер</span>
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Фейсбук</span>
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li><a href="#">
+            <span>Ютуб</span>
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
       </ul>
     </div>
     <div>
-      <p>Website by</p> 
+      <p>Website by</p>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="https://via.placeholder.com/150x100" alt="логотип HTML Академии">
+        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="логотип HTML Академии">
       </a>
     </div>
   </footer>
   <section>
     <h2>форма поиска жилья в Седоне</h2>
-    <button type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
     <form action="https://echo.htmlacademy.ru/courses" method="get">
       <label for="date-in_field">Дата заезда:</label>
-      <input id="date-in_field" type="date" name="date-in" value ="2017-04-24">
+      <input id="date-in_field" type="date" name="date-in" value="2017-04-24">
       <label for="date-out_field">Дата выезда:</label>
-      <input id="date-out_field" type="date" name="date-out" value ="2017-07-04">
+      <input id="date-out_field" type="date" name="date-out" value="2017-07-04">
       <label for="adults_group_field">Взрослые:</label>
       <input type="number" id="adults_group_field" min="1" max="10" value="2">
       <label for="children_group_field">Дети:</label>
@@ -112,4 +159,5 @@
     </form>
   </section>
 </body>
+
 </html>
