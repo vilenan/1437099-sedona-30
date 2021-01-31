@@ -1,0 +1,261 @@
+/* Fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2")format("woff2"),
+    url("../fonts/PTSans.woff")format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff2")format("woff2"),
+    url("../fonts/PTSans-Bold.woff")format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --acсent: #81B3D2;
+  --acсent-dark: #669EC0;
+  --acсent-extra-dark: #5496BD;
+  --text-color: #333333;
+  --basic-white: #FFFFFF;
+  --background: #EEEEEE;
+  --btn: #766357;
+  --btn-dark: #604E43;
+  --btn-extra-dark: #503E33;
+  --input-background: #F2F2F2;
+  --input-hover: #EBEBEB;
+  --form-text: #A9A9A9;
+  --html-logo: #BDBBBC;
+
+
+}
+
+.page-body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+  text-transform: uppercase;
+  min-width: 1200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+
+.cite-navigation-list {
+  list-style: none;
+}
+
+.cite-navigation-link {
+  text-decoration: none;
+  color: var(--basic-black);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.cite-navigation-link[href]:hover {
+  color: var(--acсent);
+}
+
+.cite-navigation-link[href]:active {
+  opacity: 30%;
+}
+
+.cite-navigation-link-current {
+  color: var(--brown-active);
+}
+
+/* Welcome to Sedona */
+
+.welcome {
+  background-image: url(../img/index-mountains.jpg);
+  background-color: var(--acсent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+/* Promo */
+
+.promo-content {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  width: 470px;
+  color: var(--basic-black);
+}
+
+.promo-text {
+  font-size: 14px;
+  line-height: 26px;
+  width: 520px;
+}
+
+/* Town */
+
+.true-town-title,
+.bridge-title {
+  color: var(--basic-white);
+}
+
+.true-town-content,
+.bridge-town-content {
+  background-color: var(--acсent);
+  color: var(--basic-white);
+  /* text-align: center; */
+}
+
+/* Town-features */
+
+.town-features-list {
+  list-style: none;
+}
+
+/* Rest-advantages */
+
+.rest-advantages {
+  background-color: var(--background);
+}
+
+/* Hotel-search */
+
+.hotel-search-title {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.hotel-search-content {
+  font-size: 14px;
+  line-height: 24px;
+  width: 435px;
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  outline: none;
+}
+
+.form-appearance-button {
+  background-color: var(--btn);
+}
+
+.form-appearance-button:hover {
+  background-color: var(--btn-dark);
+}
+
+.form-appearance-button:active {
+  background-color: var(--btn-extra-dark);
+  color: rgba(255, 255, 255, 0.3);
+  /*как записать через кастомные */
+}
+
+/* Footer */
+
+.footer-contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-link {
+  background-color: var(--acсent);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: var(--acсent-dark);
+}
+
+.social-link:active {
+  background-color: var(--acсent-extra-dark);
+}
+
+.copyright-content {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.copyright-link:hover path {
+  fill: var(--acсent);
+}
+
+.copyright-link:active path {
+  fill: var(--html-logo);
+}
+
+/* Form-modal */
+
+.modal-search {
+  width: 568px;
+  height: 395px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.search-hotel-form input {
+  background-color: var(--input-background);
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+.search-hotel-form input:hover {
+  background-color: var(--input-hover);
+}
+
+.search-hotel-form input:active {
+  background-color: transparent;
+  outline: solid 2px #E5E5E5;
+}
+
+.modal-button {
+  background-color: var(--acсent);
+  width: 100%;
+}
+
+.modal-button:hover {
+  background-color: var(--acсent-dark);
+}
+
+.modal-button:active {
+  background-color: var(--acсent-extra-dark);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Catalog */
