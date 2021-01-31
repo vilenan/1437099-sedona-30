@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>сайт поиска жилья в городе Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="icon" href="favicon.ico">
@@ -28,11 +29,14 @@
   </header>
   <main>
     <h1>Поиск гостиницы в городе Седона</h1>
-    <section>
+
+    <section class="filters">
+
       <h2>Фильтры</h2>
+
       <form action="https://echo.htmlacademy.ru/courses" method="get">
-        <fieldset>
-          <legend>Инфраструктура:</legend>
+        <fieldset class="form-section">
+          <legend class="form-section-title">Инфраструктура:</legend>
           <label for="filter_pool">Бассейн</label>
           <input id="filter_pool" type="checkbox" name="pool" checked>
           <label for="filter_parking">Парковка</label>
@@ -40,69 +44,69 @@
           <label for="filter_wi-fi">Wi-Fi</label>
           <input id="filter_wi-fi" type="checkbox" name="wi-fi">
         </fieldset>
-        <fieldset>
-          <legend>Тип жилья:</legend>
+        <fieldset class="form-section">
+          <legend class="form-section-title">Тип жилья:</legend>
           <label for="filter_hotel">Гостиница</label><input id="filter_hotel" type="checkbox" name="hotel" checked>
           <label for="filter_motel">Мотель</label><input id="filter_motel" type="checkbox" name="motel" checked>
           <label for="filter_appartments">Апартаменты</label><input id="filter_appartments" type="checkbox"
             name="appartments" checked>
         </fieldset>
-        <fieldset>
-          <legend>Стоимость в сутки (Р):</legend>
+        <fieldset class="form-section">
+          <legend class="form-section-title">Стоимость в сутки (Р):</legend>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button filters-button" type="submit">Показать</button>
       </form>
     </section>
 
     <section class="search-results">
       <h2>Результаты поиска</h2>
-      <span>Найдено: 3</span>
-      <div>
-        <h3>Сортировка:</h3>
-        <ul class="search-results-sort">
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По рейтингу</li>
+      <span class="search-results-number">Найдено: 3</span>
+      <div class="sorting">
+        <h3 class="sorting-title">Сортировка:</h3>
+        <ul class="sorting-list">
+          <li class="sorting-item sorting-item_active">По цене</li>
+          <li class="sorting-item">По типу</li>
+          <li class="sorting-item">По рейтингу</li>
         </ul>
       </div>
 
       <ul class="search-results-list">
         <li>
-          <article>
+          <article class="search-results-item">
             <img src="img/hotel_1.jpg" width="135" height="90" alt="фото гостиницы Amara Resort & Spa">
             <div>
-              <h3>Amara Resort & Spa</h3>
+              <h3 class="search-item-title">Amara Resort & Spa</h3>
               <p>Гостиница</p>
               <p>От 4000 Р.</p>
               <p>Рейтинг: 8,5</p>
-              <a href="#">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <a class="button details-button" href="#">Подробнее</a>
+              <button class="button book-button" type="button">Забронировать</button>
             </div>
           </article>
         </li>
         <li>
-          <article>
+          <article class="search-results-item">
             <img src="img/hotel_2.jpg" width="135" height="90" alt="фото гостиницы Desert Quail Inn">
             <div>
-              <h3>Desert Quail Inn</h3>
+              <h3 class="search-item-title">Desert Quail Inn</h3>
               <p>Мотель</p>
               <p>От 3000 Р.</p>
               <p>Рейтинг: 8,9</p>
-              <a href="#">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <a class="button details-button" href="#">Подробнее</a>
+              <button class="button book-button" type="button">Забронировать</button>
             </div>
           </article>
         </li>
         <li>
-          <article>
+          <article class="search-results-item">
             <img src="img/hotel_3.jpg" width="135" height="90" alt="фото гостиницы Villas at Poco Diablo">
             <div>
-              <h3>Villas at Poco Diablo</h3>
+              <h3 class="search-item-title">Villas at Poco Diablo</h3>
               <p>Апартаменты</p>
               <p>От 2000 Р.</p>
               <p>Рейтинг: 9,2</p>
-              <a href="#">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <a class="button details-button" href="#">Подробнее</a>
+              <button class="button book-button" type="button">Забронировать</button>
             </div>
           </article>
         </li>
@@ -157,10 +161,6 @@
       </a>
     </div>
   </footer>
-
-  <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
-      href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
 </body>
 
 </html>

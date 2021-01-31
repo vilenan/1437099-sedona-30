@@ -259,3 +259,111 @@ img {
 }
 
 /* Catalog */
+.filters {
+  background-color: var(--acсent);
+  background-image: url(../img/background-catalog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--basic-white);
+}
+
+.filters-button {
+  background: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.form-section {
+  border: none;
+}
+
+.form-section-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* Search-results */
+
+.search-results-number {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.sorting-title {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-item {
+  opacity: 30%;
+}
+
+.sorting-item_active {
+  color: var(--acсent);
+  opacity: 100%;
+}
+
+.search-results-list {
+  list-style: none;
+}
+
+.search-results-item {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.search-item-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.details-button {
+  background-color: var(--acсent);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.details-button:hover {
+  background-color: var(--acсent-dark);
+}
+
+.details-button:active {
+  background-color: var(--acсent-extra-dark);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.book-button {
+  background-color: var(--btn);
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.book-button:hover {
+  background-color: var(--btn-dark);
+}
+
+.book-button:active {
+  background-color: var(--btn-extra-dark);
+  color: rgba(255, 255, 255, 0.3);
+  /*как записать через кастомные */
+}
