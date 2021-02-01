@@ -73,7 +73,8 @@ img {
   color: var(--acсent);
 }
 
-.cite-navigation-link[href]:active {
+.cite-navigation-link[href]:active,
+.cite-navigation-link[href]:focus {
   opacity: 30%;
 }
 
@@ -172,7 +173,8 @@ img {
   background-color: var(--btn-dark);
 }
 
-.form-appearance-button:active {
+.form-appearance-button:active,
+.form-appearance-button:focus {
   background-color: var(--btn-extra-dark);
   color: rgba(255, 255, 255, 0.3);
   /*как записать через кастомные */
@@ -199,7 +201,8 @@ img {
   background-color: var(--acсent-dark);
 }
 
-.social-link:active {
+.social-link:active,
+.social-link:focus {
   background-color: var(--acсent-extra-dark);
 }
 
@@ -213,7 +216,8 @@ img {
   fill: var(--acсent);
 }
 
-.copyright-link:active path {
+.copyright-link:active path,
+.copyright-link:focus path {
   fill: var(--html-logo);
 }
 
@@ -239,7 +243,8 @@ img {
   background-color: var(--input-hover);
 }
 
-.search-hotel-form input:active {
+.search-hotel-form input:active,
+.search-hotel-form input:focus {
   background-color: transparent;
   outline: solid 2px #E5E5E5;
 }
@@ -253,7 +258,8 @@ img {
   background-color: var(--acсent-dark);
 }
 
-.modal-button:active {
+.modal-button:active,
+.modal-button:focus {
   background-color: var(--acсent-extra-dark);
   color: rgba(255, 255, 255, 0.3);
 }
@@ -273,6 +279,11 @@ img {
   border-radius: 2px;
   font: inherit;
   text-transform: uppercase;
+}
+
+.filters-button:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
 
 .form-section {
@@ -346,7 +357,8 @@ img {
   background-color: var(--acсent-dark);
 }
 
-.details-button:active {
+.details-button:active,
+.details-button:focus {
   background-color: var(--acсent-extra-dark);
   color: rgba(255, 255, 255, 0.3);
 }
@@ -362,7 +374,8 @@ img {
   background-color: var(--btn-dark);
 }
 
-.book-button:active {
+.book-button:active,
+.book-button:focus {
   background-color: var(--btn-extra-dark);
   color: rgba(255, 255, 255, 0.3);
   /*как записать через кастомные */
