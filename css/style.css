@@ -239,6 +239,36 @@ img {
   font: inherit;
 }
 
+input[type="text"]::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+input[type="text"]::-moz-placeholder {
+  color: var(--basic-black);
+}
+
+/* .input_custom {
+  position: relative;
+}
+
+.input_custom::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 23px;
+  background-image: url("../img/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+} */
+.icon-calendar:hover path {
+  fill: var(--basic-black);
+}
+
+.icon-calendar:active path {
+  fill: var(--acсent);
+}
+
 .search-hotel-form input:hover {
   background-color: var(--input-hover);
 }
