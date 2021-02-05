@@ -33,8 +33,11 @@
   --input-hover: #EBEBEB;
   --form-text: #A9A9A9;
   --html-logo: #BDBBBC;
+}
 
 
+.page {
+  height: 100%;
 }
 
 .page-body {
@@ -48,6 +51,12 @@
   color: var(--text-color);
   text-transform: uppercase;
   min-width: 1200px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+
 }
 
 img {
@@ -55,10 +64,17 @@ img {
   height: auto;
 }
 
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
 /* Header */
 
 .cite-navigation-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .cite-navigation-link {
@@ -90,6 +106,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
+  text-align: center;
 }
 
 .title {
@@ -107,15 +124,23 @@ img {
   line-height: 26px;
   width: 470px;
   color: var(--basic-black);
+  text-align: center;
+  margin: 0;
 }
 
 .promo-text {
   font-size: 14px;
   line-height: 26px;
   width: 520px;
+  text-align: center;
+  margin: 0;
 }
 
 /* Town */
+.true-town {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
 
 .true-town-title,
 .bridge-title {
@@ -126,19 +151,63 @@ img {
 .bridge-town-content {
   background-color: var(--acсent);
   color: var(--basic-white);
-  /* text-align: center; */
+}
+
+.true-town-image,
+.bridge-town-image {
+  display: block;
+}
+
+.true-town-text {
+  text-align: center;
 }
 
 /* Town-features */
 
 .town-features-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.town-features-item {
+  padding: 60px 52px 82px;
+}
+
+.town-features-content {
+  text-align: center;
+}
+
+/*Bridge*/
+.bridge-town {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+}
+
+.bridge-town-content {
+  order: 1;
+}
+
+.bridge-text {
+  text-align: center;
 }
 
 /* Rest-advantages */
 
 .rest-advantages {
   background-color: var(--background);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rest-advantages-item {
+  padding: 47px 52px 54px;
+}
+
+.rest-advantages-content {
+  text-align: center;
 }
 
 /* Hotel-search */
@@ -182,10 +251,21 @@ img {
 
 /* Footer */
 
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 72px;
+}
+
 .footer-contacts {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  justify-self: center;
+}
+
+.footer-social {
+  justify-self: center;
 }
 
 .social-list {
@@ -204,6 +284,10 @@ img {
 .social-link:active,
 .social-link:focus {
   background-color: var(--acсent-extra-dark);
+}
+
+.copyright {
+  justify-self: center;
 }
 
 .copyright-content {
@@ -303,6 +387,23 @@ input[type="text"]::-moz-placeholder {
   color: var(--basic-white);
 }
 
+.filters-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 26px 72px 32px;
+}
+
+.infrastructure-and-hoteltype {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: start;
+}
+
+.cost {
+  justify-self: end;
+}
+
+
 .filters-button {
   background: transparent;
   border: 2px solid var(--basic-white);
@@ -327,6 +428,33 @@ input[type="text"]::-moz-placeholder {
 }
 
 /* Search-results */
+.search-results-list {
+  margin: 0;
+  padding: 0;
+}
+
+.search-results-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px 72px;
+}
+
+.search-results-wrapper {
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  column-gap: 29px;
+}
+
+.seach-results-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.search-item-title {
+  grid-column: 1/-1;
+  margin: 0;
+  padding: 0;
+}
 
 .search-results-number {
   font-weight: bold;
@@ -335,7 +463,24 @@ input[type="text"]::-moz-placeholder {
   color: var(--basic-black);
 }
 
+.rating {
+  justify-self: end;
+}
+
+/*sorting*/
+.sorting-wrapper {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  padding: 31px 72px 37px;
+}
+
 .sorting {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 29px;
+}
+
+.sorting-filters {
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-black);
