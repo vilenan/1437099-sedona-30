@@ -25,37 +25,54 @@
         </li>
         <li class="cite-navigation-item"><a class="cite-navigation-link" href="blank.html" tabindex="0">Фото и видео</a>
         </li>
-        <li class="cite-navigation-item"><a class="cite-navigation-link" href="blank.html" tabindex="0">Карта штата</a>
+        <li class="cite-navigation-item right"><a class="cite-navigation-link" href="blank.html" tabindex="0">Карта
+            штата</a>
         </li>
-        <li class="cite-navigation-item"><a class="cite-navigation-link cite-navigation-link-current"
+        <li class="cite-navigation-item right"><a class="cite-navigation-link cite-navigation-link-current"
             tabindex="0">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Поиск гостиницы в городе Седона</h1>
+    <h1 class="visually-hidden">Поиск гостиницы в городе Седона</h1>
 
     <section class="filters">
 
-      <h2>Фильтры</h2>
+      <h2 class="visually-hidden">Фильтры</h2>
 
       <form class="filters-form" action="https://echo.htmlacademy.ru/courses" method="get">
         <div class="infrastructure-and-hoteltype">
           <fieldset class="form-section">
             <legend class="form-section-title">Инфраструктура:</legend>
-            <label for="filter_pool">Бассейн</label>
-            <input id="filter_pool" type="checkbox" name="pool" checked>
-            <label for="filter_parking">Парковка</label>
-            <input id="filter_parking" type="checkbox" name="parking">
-            <label for="filter_wi-fi">Wi-Fi</label>
-            <input id="filter_wi-fi" type="checkbox" name="wi-fi">
+            <ul class="infrastructure-list">
+              <li class="filter-option filter-checkbox">
+                <label for="filter_pool">Бассейн</label>
+                <input id="filter_pool" type="checkbox" name="pool" checked></li>
+              <li class="filter-option filter-checkbox">
+                <label for="filter_parking">Парковка</label>
+                <input id="filter_parking" type="checkbox" name="parking">
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label for="filter_wi-fi">Wi-Fi</label>
+                <input id="filter_wi-fi" type="checkbox" name="wi-fi">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form-section">
             <legend class="form-section-title">Тип жилья:</legend>
-            <label for="filter_hotel">Гостиница</label><input id="filter_hotel" type="checkbox" name="hotel" checked>
-            <label for="filter_motel">Мотель</label><input id="filter_motel" type="checkbox" name="motel" checked>
-            <label for="filter_appartments">Апартаменты</label><input id="filter_appartments" type="checkbox"
-              name="appartments" checked>
+            <ul class="hotel-type-list">
+              <li class="filter-option filter-radio">
+                <label for="filter_hotel">Гостиница</label>
+                <input id="filter_hotel" type="checkbox" name="hotel" checked>
+              </li>
+              <li class="filter-option filter-radio">
+                <label for="filter_motel">Мотель</label>
+                <input id="filter_motel" type="checkbox" name="motel" checked></li>
+              <li class="filter-option filter-radio">
+                <label for="filter_appartments">Апартаменты</label>
+                <input id="filter_appartments" type="checkbox" name="appartments" checked></li>
+            </ul>
+
           </fieldset>
         </div>
         <div class="cost">
@@ -68,7 +85,7 @@
     </section>
 
     <section class="search-results">
-      <h2>Результаты поиска</h2>
+      <h2 class="visually-hidden">Результаты поиска</h2>
       <div class="sorting-wrapper">
         <div class="sorting">
           <span class="search-results-number">Найдено: 3</span>
@@ -157,7 +174,7 @@
       <ul class="social-list">
         <li class="social-item">
           <a class="social-link" href="#" tabindex="0">
-            <span>Твиттер</span>
+            <span class="visually-hidden">Твиттер</span>
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
@@ -167,14 +184,14 @@
         </li>
         <li class="social-item">
           <a class="social-link" href="#" tabindex="0">
-            <span>Фейсбук</span>
+            <span class="visually-hidden">Фейсбук</span>
             <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
             </svg>
           </a>
         </li>
         <li class="social-item"><a class="social-link" href="#" tabindex="0">
-            <span>Ютуб</span>
+            <span class="visually-hidden">Ютуб</span>
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
