@@ -56,7 +56,7 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-
+  box-sizing: border-box;
 }
 
 img {
@@ -135,6 +135,10 @@ img {
 .cite-navigation-link-current {
   color: var(--brown-active);
 }
+
+/* .main-content {
+  grid-row: 2/-1;
+} */
 
 /* Welcome to Sedona */
 
@@ -331,12 +335,24 @@ img {
   /*как записать через кастомные */
 }
 
+.map {
+  width: 1200px;
+  height: 594px;
+}
+
+.map img {
+  display: block;
+  object-fit: cover;
+}
+
 /* Footer */
 
 .footer {
+  /* grid-row: -1/-2; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0 72px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .footer-contacts {
@@ -410,6 +426,23 @@ img {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
+  padding: 55px;
+}
+
+.search-hotel-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-hotel-form p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.search-hotel-form label {
+  width: 112px;
 }
 
 .search-hotel-form input {
@@ -417,6 +450,7 @@ img {
   border: none;
   outline: none;
   font: inherit;
+
 }
 
 input[type="text"]::-webkit-input-placeholder {
@@ -427,20 +461,7 @@ input[type="text"]::-moz-placeholder {
   color: var(--basic-black);
 }
 
-/* .input_custom {
-  position: relative;
-}
 
-.input_custom::before {
-  position: absolute;
-  content: "";
-  width: 21px;
-  height: 23px;
-  background-image: url("../img/icons/calendar.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
-} */
 .icon-calendar:hover path {
   fill: var(--basic-black);
 }
@@ -462,6 +483,9 @@ input[type="text"]::-moz-placeholder {
 .modal-button {
   background-color: var(--acсent);
   width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .modal-button:hover {
@@ -473,6 +497,15 @@ input[type="text"]::-moz-placeholder {
   background-color: var(--acсent-extra-dark);
   color: rgba(255, 255, 255, 0.3);
 }
+
+.input_custom {
+  position: relative;
+}
+
+.icon-calendar {
+  position: absolute;
+}
+
 
 /* Catalog */
 .filters {
@@ -515,6 +548,37 @@ input[type="text"]::-moz-placeholder {
 .filter-option {
   margin-bottom: 25px;
 }
+
+.label-checkbox {
+  position: relative;
+}
+
+.label-checkbox::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/icons/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -39px;
+  top: -2px;
+}
+
+.input-checkbox:checked+.label-checkbox::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/icons/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -39px;
+  top: -2px;
+}
+
+
+
 
 .cost {
   justify-self: end;

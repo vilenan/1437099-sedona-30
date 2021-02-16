@@ -33,6 +33,7 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <h1 class="visually-hidden">Поиск гостиницы в городе Седона</h1>
 
@@ -45,32 +46,36 @@
           <fieldset class="form-section">
             <legend class="form-section-title">Инфраструктура:</legend>
             <ul class="infrastructure-list">
-              <li class="filter-option filter-checkbox">
-                <label for="filter_pool">Бассейн</label>
-                <input id="filter_pool" type="checkbox" name="pool" checked></li>
-              <li class="filter-option filter-checkbox">
-                <label for="filter_parking">Парковка</label>
-                <input id="filter_parking" type="checkbox" name="parking">
+              <li class="filter-option">
+                <input class="visually-hidden input-checkbox" id="filter_pool" type="checkbox" name="pool" checked>
+                <label class="label-checkbox" for="filter_pool">Бассейн</label>
+              <li class="filter-option">
+                <input class="visually-hidden input-checkbox" id="filter_parking" type="checkbox" name="parking">
+                <label class="label-checkbox" for="filter_parking">Парковка</label>
               </li>
-              <li class="filter-option filter-checkbox">
-                <label for="filter_wi-fi">Wi-Fi</label>
-                <input id="filter_wi-fi" type="checkbox" name="wi-fi">
+              <li class="filter-option">
+                <input class="visually-hidden input-checkbox" id="filter_wi-fi" type="checkbox" name="wi-fi">
+                <label class="label-checkbox" for="filter_wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="form-section">
             <legend class="form-section-title">Тип жилья:</legend>
             <ul class="hotel-type-list">
-              <li class="filter-option filter-radio">
-                <label for="filter_hotel">Гостиница</label>
-                <input id="filter_hotel" type="checkbox" name="hotel" checked>
+              <li class="filter-option">
+                <input class="visually-hidden input-checkbox" id="filter_hotel" type="checkbox" name="hotel" checked>
+                <label class="label-checkbox" for="filter_hotel">Гостиница</label>
               </li>
-              <li class="filter-option filter-radio">
-                <label for="filter_motel">Мотель</label>
-                <input id="filter_motel" type="checkbox" name="motel" checked></li>
-              <li class="filter-option filter-radio">
-                <label for="filter_appartments">Апартаменты</label>
-                <input id="filter_appartments" type="checkbox" name="appartments" checked></li>
+              <li class="filter-option">
+                <input class="visually-hidden input-checkbox" id="filter_motel" type="checkbox" name="motel" checked>
+                <label class="label-checkbox" for="filter_motel">Мотель</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden input-checkbox" id="filter_appartments" type="checkbox" name="appartments"
+                  checked>
+                <label class="label-checkbox" for="filter_appartments">Апартаменты</label>
+              </li>
             </ul>
 
           </fieldset>
