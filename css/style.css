@@ -119,6 +119,7 @@ img {
 .logo {
   position: absolute;
   left: 459px;
+  z-index: 2;
 }
 
 .cite-navigation-link {
@@ -159,6 +160,20 @@ img {
   display: flex;
   align-content: center;
   justify-content: center;
+  position: relative;
+}
+
+.welcome::after {
+  content: "";
+  background-image: url("../img/Shape-mask.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  width: 100%;
+  height: 57px;
+  bottom: 0;
+  left: 0;
+
 }
 
 .title {
@@ -369,6 +384,9 @@ img {
   padding: 0 72px;
   background: rgba(255, 255, 255, 0.9);
   min-height: 120px;
+}
+
+.footer_index-page {
   margin-top: -120px;
   z-index: 3;
   position: relative;
@@ -502,11 +520,11 @@ img {
   padding-right: 25px;
 }
 
-input[type="text"]::-webkit-input-placeholder {
+.input_custom::-webkit-input-placeholder {
   color: var(--basic-black);
 }
 
-input[type="text"]::-moz-placeholder {
+.input_custom::-moz-placeholder {
   color: var(--basic-black);
 }
 
@@ -630,7 +648,80 @@ input[type="text"]::-moz-placeholder {
 .cost {
   justify-self: end;
   width: 317px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.cost-input {
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-size: inherit;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cost-input::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+
+.cost-input::-moz-placeholder {
+  color: var(--basic-white);
+}
+
+.price-controls {
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+
+}
+
+.devider {
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+}
+
+.range-controls {
+  position: relative;
+}
+
+.scale {
+  height: 2px;
+  background-color: #999999;
+  margin-top: 20px;
+  margin-bottom: 33px;
+}
+
+.bar {
+  height: 2px;
+  background-color: var(--basic-white);
+  /* width: 80%; */
+}
+
+.toggle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #ABABAB;
+  border-radius: 50%;
+  border: 8px solid var(--basic-white);
+  /* box-shadow: 0 2px 1px 0 #cfcfcf; */
+  top: -9px;
+  box-sizing: content-box;
+
+}
+
+.toggle-max {
+  /* left: 240px; */
+}
+
+
+
 
 .filters-button {
   background: transparent;
@@ -638,6 +729,11 @@ input[type="text"]::-moz-placeholder {
   border-radius: 2px;
   font: inherit;
   text-transform: uppercase;
+  line-height: 36px;
+  padding-right: 10px;
+  padding-left: 10px;
+  min-width: 137px;
+
 }
 
 .filters-button:hover {
@@ -675,7 +771,9 @@ input[type="text"]::-moz-placeholder {
 
 .seach-results-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: min-content 1fr 27px;
+  column-gap: 6px;
 }
 
 .search-item-title {
@@ -704,8 +802,9 @@ input[type="text"]::-moz-placeholder {
 
 .sorting {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 135px 1fr;
   column-gap: 29px;
+  align-items: center;
 }
 
 .sorting-filters {
@@ -735,13 +834,18 @@ input[type="text"]::-moz-placeholder {
 }
 
 .sorting-item {
-  opacity: 30%;
+  /* opacity: 30%; */
+  color: #b3b3b3;
   margin-right: 32px;
+  text-decoration-line: underline;
+  text-decoration-color: var(--acсent);
+  text-decoration-style: dotted;
 }
 
 .sorting-item_active {
   color: var(--acсent);
   opacity: 100%;
+  text-decoration: none;
 }
 
 .search-results-list {
@@ -751,6 +855,11 @@ input[type="text"]::-moz-placeholder {
 .search-results-item {
   font-size: 14px;
   line-height: 21px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.search-results-item:last-child {
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .search-item-title {
@@ -760,11 +869,14 @@ input[type="text"]::-moz-placeholder {
   color: var(--basic-black);
 }
 
+
 .details-button {
   background-color: var(--acсent);
   text-decoration: none;
   font-size: 14px;
-  line-height: 21px;
+  padding-right: 17px;
+  padding-left: 17px;
+  line-height: 27px;
 }
 
 .details-button:hover {
@@ -780,8 +892,11 @@ input[type="text"]::-moz-placeholder {
 .book-button {
   background-color: var(--btn);
   font-size: 14px;
-  line-height: 21px;
+  padding-right: 17px;
+  padding-left: 17px;
+  line-height: 27px;
   text-transform: uppercase;
+  justify-self: left;
 }
 
 .book-button:hover {
@@ -793,4 +908,13 @@ input[type="text"]::-moz-placeholder {
   background-color: var(--btn-extra-dark);
   color: rgba(255, 255, 255, 0.3);
   /*как записать через кастомные */
+}
+
+.rating-value {
+  min-width: 110px;
+  padding-left: 15px;
+  padding-right: 12px;
+  height: 27px;
+  line-height: 27px;
+  background-color: var(--input-background);
 }

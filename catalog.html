@@ -80,12 +80,38 @@
 
           </fieldset>
         </div>
+
         <div class="cost">
           <fieldset class="form-section">
             <legend class="form-section-title">Стоимость в сутки (Р):</legend>
+
+            <div class="price-controls">
+              <label class="" aria-label="от">
+                <input class="cost-input" name="min-price" type="text" placeholder="от 0">
+              </label>
+
+              <div class="devider"></div>
+
+              <label class="" aria-label="до">
+                <input class="cost-input" min="max-price" type="text" placeholder="до 3000">
+              </label>
+            </div>
+
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="width: 80%">
+
+                </div>
+              </div>
+
+              <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 80%"></div>
+            </div>
+
           </fieldset>
           <button class="button filters-button" type="submit">Показать</button>
         </div>
+
       </form>
     </section>
 
@@ -104,14 +130,20 @@
           </div>
         </div>
         <div class="value-sort">
-          <span>по возрастанию</span>
-          <span>по убыванию</span>
+          <a class="sorting-arrow" href="#">
+            <span class="visually-hidden">по возрастанию</span>
+          </a>
+
+          <a class="sorting-arrow" href="#">
+            <span class="visually-hidden sort-current">по убыванию</span>
+          </a>
+
         </div>
       </div>
 
       <ul class="search-results-list">
-        <li>
-          <article class="search-results-item">
+        <li class="search-results-item">
+
             <div class="search-results-wrapper">
               <img src="img/hotel_1.jpg" width="135" height="90" alt="фото гостиницы Amara Resort & Spa">
               <div class="seach-results-content">
@@ -124,12 +156,12 @@
             </div>
             <div class="rating">
               <span class="stars"></span>
-              <p>Рейтинг: 8,5</p>
+              <div class="rating-value">Рейтинг: 8,5</div>
             </div>
-          </article>
+
         </li>
-        <li>
-          <article class="search-results-item">
+        <li class="search-results-item">
+
             <div class="search-results-wrapper">
               <img src="img/hotel_2.jpg" width="135" height="90" alt="фото гостиницы Desert Quail Inn">
               <div class="seach-results-content">
@@ -142,12 +174,12 @@
             </div>
             <div class="rating">
               <span class="stars"></span>
-              <p>Рейтинг: 8,9</p>
+              <div class="rating-value">Рейтинг: 8,9</div>
             </div>
-          </article>
+
         </li>
-        <li>
-          <article class="search-results-item">
+        <li class="search-results-item">
+
             <div class="search-results-wrapper">
               <img src="img/hotel_3.jpg" width="135" height="90" alt="фото гостиницы Villas at Poco Diablo">
               <div class="seach-results-content">
@@ -160,9 +192,9 @@
             </div>
             <div class="rating">
               <span class="stars"></span>
-              <p>Рейтинг: 9,2</p>
+              <div class="rating-value">Рейтинг: 9,2</div>
             </div>
-          </article>
+
         </li>
       </ul>
     </section>
