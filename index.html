@@ -111,8 +111,9 @@
       <p class="hotel-search-content">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
         в седоне</p>
       <button class="button form-appearance-button" type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
-      <section class="modal modal-search modal-close">
+      <section class="modal modal-search">
         <h2 class="visually-hidden">форма поиска жилья в Седоне</h2>
+
         <form class="search-hotel-form" action="https://echo.htmlacademy.ru/courses" method="get">
           <div class="form-line">
             <label for="date-in_field">Дата заезда:</label>
@@ -145,16 +146,17 @@
           <div class="form-line form-line-people">
 
               <label for="adults_group_field">Взрослые:</label>
-              <input class="input_custom input_people" type="number" id="adults_group_field" min="1" max="10" value="2">
+              <input class="input_custom input_people" type="text" id="adults_group_field" placeholder="2">
 
               <label class="label-for-children" for="children_group_field">Дети:</label>
-              <input class="input_custom input_people" type="number" id="children_group_field" min="1" max="10"
-                value="0">
+              <input class="input_custom input_people" type="text" id="children_group_field" placeholder="0">
 
           </div>
           <button class="button modal-button" type="submit">Найти</button>
         </form>
+
       </section>
+
     </div>
 
     <div class="map">
@@ -215,7 +217,7 @@
       </a>
     </div>
   </footer>
-
+<script src="js/main.js"></script>
 </body>
 
 </html>
