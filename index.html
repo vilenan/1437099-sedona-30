@@ -156,10 +156,36 @@
             <div class="form-line form-line-people">
 
                 <label for="adults_group_field">Взрослые:</label>
-                <input class="input_custom input_people" type="text" id="adults_group_field" placeholder="2">
+                <div class="adults_group_field-wrapper">
+                  <button class="button input-button">
+                    <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="12" height="3" fill="#A9A9A9"/>
+                      </svg>
+
+                  </button>
+                  <input class="input_custom input_people" type="text" id="adults_group_field" placeholder="2">
+                  <button class="button input-button">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+                      </svg>
+                  </button>
+                </div>
 
                 <label class="label-for-children" for="children_group_field">Дети:</label>
+                <div class="children_group_field-wrapper">
+                  <button class="button input-button">
+                    <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="12" height="3" fill="#A9A9A9"/>
+                      </svg>
+
+                  </button>
                 <input class="input_custom input_people" type="text" id="children_group_field" placeholder="0">
+                <button class="button input-button">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+                    </svg>
+                </button>
+              </div>
 
             </div>
             <button class="button modal-button" type="submit">Найти</button>
@@ -219,7 +245,7 @@
       </a>
     </div>
   </footer>
-<script src="js/main.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
