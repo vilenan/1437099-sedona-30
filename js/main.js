@@ -1,31 +1,50 @@
-'use strict';
+// 'use strict';
 const popupShowButton = document.querySelector('.form-appearance-button');
 const popup = document.querySelector('.modal-search'); //найдем попап
 const formSearchHotel = popup.querySelector('.search-hotel-form'); //найдем форму
 
-const formaDateIn = popup.querySelector('[id=date-in_field]'); //найдем поля формы
-const formaDateOut = popup.querySelector('[id=date-out_field]');
+const formDateIn = popup.querySelector('[id=date-in_field]'); //найдем поля формы
+const formDateOut = popup.querySelector('[id=date-out_field]');
+const formAdults = popup.querySelector('[id=adults_group_field]');
+const formChildren = popup.querySelector('[id=children_group_field]');
+
 const formSendButton = document.querySelector('.modal-button');
 
+let isStorageSupport = true;
+
+try {
+  formAdults.value = localStorage.getItem('adults');
+  formChildren.value = localStorage.getItem('children');
+} catch (err){
+  isStorageSupport = false;
+}
 
 
+//появление попапа и фокусировка
 popupShowButton.addEventListener('click', function () {
   if (popup.classList.contains('modal-show')) {
     popup.classList.remove('modal-show');
     popup.classList.remove('modal-error');
   } else {
     popup.classList.add('modal-show');
-    formaDateIn.focus();
+    formDateIn.focus();
+    formAdults.value = localStorage.getItem('adults');
+    formChildren.value = localStorage.getItem('children');
   }
 
 });
 
 formSearchHotel.addEventListener('submit', function (evt) {
-  if (!formaDateIn.value || !formaDateOut.value) {
+  if (!formDateIn.value || !formDateOut.value || !formAdults.value || !formChildren.value) {
     evt.preventDefault();
-    // popup.classList.remove('modal-error');
-    // popup.offsetWidth = popup.offsetWidth;
+    popup.classList.remove('modal-error');
+    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add('modal-error');
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem('adults', formAdults.value);
+      localStorage.setItem('children', formChildren.value);
+    }
   }
 
 });
