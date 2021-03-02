@@ -11,6 +11,8 @@ const formChildren = popup.querySelector('[id=children_group_field]');
 const formSendButton = document.querySelector('.modal-button');
 
 let isStorageSupport = true;
+formAdults.value = 2;
+formChildren.value = 0;
 
 try {
   formAdults.value = localStorage.getItem('adults');
@@ -35,7 +37,7 @@ popupShowButton.addEventListener('click', function () {
 });
 
 formSearchHotel.addEventListener('submit', function (evt) {
-  if (!formDateIn.value || !formDateOut.value || !formAdults.value || !formChildren.value) {
+  if (!formDateIn.value || !formDateOut.value) {
     evt.preventDefault();
     popup.classList.remove('modal-error');
     popup.offsetWidth = popup.offsetWidth;
