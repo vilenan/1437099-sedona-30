@@ -301,6 +301,8 @@ img {
   background-color: var(--background);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  z-index: 3;
 }
 
 .rest-advantages-item {
@@ -327,6 +329,7 @@ img {
   flex-direction: column;
   align-items: center;
   position: relative;
+  z-index: 3;
   background-color: var(--basic-white);
 }
 
@@ -376,6 +379,7 @@ img {
 .map {
   width: 1200px;
   height: 594px;
+  position: relative;
 }
 
 /* Footer */
@@ -442,12 +446,15 @@ img {
 .copyright {
   justify-self: center;
   align-self: center;
+  display: flex;
+  align-items: center;
 }
 
 .copyright-content {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
+  margin-right: 10px;
 }
 
 .copyright-link:hover path {
@@ -472,7 +479,8 @@ img {
   position: absolute;
   background: var(--basic-white);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-  top: 100%;
+  top: 0;
+  left: calc(50% - 284px);
   display: none;
 }
 
