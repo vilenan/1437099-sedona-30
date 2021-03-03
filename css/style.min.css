@@ -1,22 +1,51 @@
-/* Fonts */
+@keyframes bounce {
+  0% {
+    transform: translateY(-395px);
+    opacity: 0
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  to {
+    transform: translateX(0)
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px)
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px)
+  }
+}
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans.woff2")format("woff2"),
-    url("../fonts/PTSans.woff")format("woff");
+  src: url(../fonts/PTSans.woff2)format("woff2"), url(../fonts/PTSans.woff)format("woff");
   font-weight: 400;
-  font-style: normal;
+  font-style: normal
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans-Bold.woff2")format("woff2"),
-    url("../fonts/PTSans-Bold.woff")format("woff");
+  src: url(../fonts/PTSans-Bold.woff2)format("woff2"), url(../fonts/PTSans-Bold.woff)format("woff");
   font-weight: 700;
-  font-style: normal;
+  font-style: normal
 }
-
-/* Variables */
 
 :root {
   --basic-black: #000000;
@@ -32,24 +61,26 @@
   --input-background: #F2F2F2;
   --input-hover: #EBEBEB;
   --form-text: #A9A9A9;
-  --html-logo: #BDBBBC;
+  --html-logo: #BDBBBC
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
+  outline: 0
 }
 
 .page {
-  height: 100%;
+  height: 100%
+}
+
+*,
+.page-body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
 .page-body {
   font-family: "PT Sans", "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -61,13 +92,12 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, .2)
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  height: auto
 }
 
 .visually-hidden {
@@ -80,31 +110,29 @@ img {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  overflow: hidden
 }
-
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  width: 1200px
 }
 
-/* Header */
 .header {
   padding-left: 72px;
-  padding-right: 72px;
+  padding-right: 72px
 }
 
 .cite-navigation {
-  position: relative;
+  position: relative
 }
 
 .cite-navigation-item {
-  align-self: center;
+  align-self: center
 }
 
 .right {
-  justify-self: end;
+  justify-self: end
 }
 
 .cite-navigation-list {
@@ -113,117 +141,114 @@ img {
   padding: 0;
   display: grid;
   grid-template-columns: 227px 1fr 1fr 227px;
-  grid-template-rows: 56px;
+  grid-template-rows: 56px
 }
 
 .logo {
   position: absolute;
   left: 459px;
-  z-index: 2;
+  z-index: 2
 }
 
 .cite-navigation-link {
   text-decoration: none;
   color: var(--basic-black);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 26px
 }
 
 .cite-navigation-link[href]:hover {
-  color: var(--acсent);
+  color: var(--acсent)
 }
 
 .cite-navigation-link[href]:active,
 .cite-navigation-link[href]:focus {
-  opacity: 30%;
+  opacity: 30%
 }
 
 .cite-navigation-link-current {
-  color: var(--brown-active);
+  color: var(--brown-active)
 }
 
-
-/* Welcome to Sedona */
+.welcome,
+.welcome::after {
+  background-repeat: no-repeat;
+  background-position: 0 0
+}
 
 .welcome {
   background-image: url(../img/index-mountains.jpg);
   background-color: var(--acсent);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0 0;
   text-align: center;
   height: 509px;
   display: flex;
   align-content: center;
   justify-content: center;
-  position: relative;
+  position: relative
 }
 
 .welcome::after {
   content: "";
-  background-image: url("../img/Shape-mask.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background-image: url(../img/Shape-mask.png);
   position: absolute;
   width: 100%;
   height: 57px;
   bottom: 0;
-  left: 0;
-
+  left: 0
 }
 
 .title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  margin-bottom: 25px;
+  margin-bottom: 25px
 }
 
-/* Promo */
 .promo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 42px;
-  padding-bottom: 51px;
+  padding-bottom: 51px
+}
+
+.promo-content,
+.promo-text {
+  line-height: 26px;
+  text-align: center
 }
 
 .promo-content {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
-  line-height: 26px;
   width: 470px;
   color: var(--basic-black);
-  text-align: center;
-  margin: 0;
-  margin-bottom: 45px;
+  margin: 0 0 45px
 }
 
 .promo-text {
   font-size: 14px;
-  line-height: 26px;
   width: 520px;
-  text-align: center;
-  margin: 0;
+  margin: 0
 }
 
-/* Town */
 .true-town {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 400px 1fr
 }
 
-.true-town-title,
-.bridge-title {
+.bridge-title,
+.true-town-title {
   color: var(--basic-white);
   width: 150px;
-  text-align: center;
+  text-align: center
 }
 
-.true-town-content,
-.bridge-town-content {
+.bridge-town-content,
+.true-town-content {
   background-color: var(--acсent);
   color: var(--basic-white);
   display: flex;
@@ -231,95 +256,89 @@ img {
   align-items: center;
   justify-content: center;
   padding-right: 49px;
-  padding-left: 50px;
+  padding-left: 50px
 }
 
-.true-town-image,
-.bridge-town-image {
+.bridge-town-image,
+.true-town-image {
   display: block;
   object-fit: cover;
-  height: 100%;
+  height: 100%
 }
 
 .true-town-text {
   text-align: center;
-  margin-top: 23px;
+  margin-top: 23px
 }
-
-/* Town-features */
 
 .town-features-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr
 }
 
 .town-features-item {
   padding: 59px 52px 78px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
 .town-features-image {
-  margin-bottom: 28px;
+  margin-bottom: 28px
 }
 
 .town-features-content {
-  text-align: center;
+  text-align: center
 }
 
-/*Bridge*/
 .bridge-town {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 400px
 }
 
 .bridge-image-wrapper,
 .true-town-wrapper {
   width: 800px;
-  min-height: 256px;
+  min-height: 256px
 }
 
 .bridge-town-content {
-  order: 1;
+  order: 1
 }
 
 .bridge-text {
   text-align: center;
-  margin-top: 23px;
+  margin-top: 23px
 }
-
-/* Rest-advantages */
 
 .rest-advantages {
   background-color: var(--background);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
-  z-index: 3;
+  z-index: 3
 }
 
 .rest-advantages-item {
   padding: 47px 71px 54px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
 .rest-advantages-title {
   width: 120px;
-  text-align: center;
+  text-align: center
 }
 
 .rest-advantages-content {
   text-align: center;
-  margin-top: 23px;
+  margin-top: 23px
 }
 
-/* Hotel-search */
 .hotel-search {
   padding-top: 58px;
   display: flex;
@@ -327,13 +346,13 @@ img {
   align-items: center;
   position: relative;
   z-index: 3;
-  background-color: var(--basic-white);
+  background-color: var(--basic-white)
 }
 
 .hotel-search-title {
   font-size: 30px;
   line-height: 24px;
-  margin-bottom: 31px;
+  margin-bottom: 31px
 }
 
 .hotel-search-content {
@@ -341,18 +360,18 @@ img {
   line-height: 24px;
   width: 435px;
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 44px
 }
 
 .button {
   font: inherit;
   text-align: center;
-  border: none;
-  font-weight: bold;
+  border: 0;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-white);
-  outline: none;
+  outline: 0
 }
 
 .form-appearance-button {
@@ -360,66 +379,62 @@ img {
   padding: 30px 24px;
   text-align: center;
   width: 568px;
-  z-index: 5;
+  z-index: 5
 }
 
 .form-appearance-button:hover {
-  background-color: var(--btn-dark);
+  background-color: var(--btn-dark)
 }
 
 .form-appearance-button:active,
 .form-appearance-button:focus {
   background-color: var(--btn-extra-dark);
-  color: rgba(255, 255, 255, 0.3);
-  /*как записать через кастомные */
+  color: rgba(255, 255, 255, .3)
 }
 
 .map {
   width: 1200px;
   height: 594px;
-  position: relative;
+  position: relative
 }
-
-/* Footer */
 
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0 72px;
-  background: rgba(255, 255, 255, 0.9);
-  min-height: 120px;
+  background: rgba(255, 255, 255, .9);
+  min-height: 120px
 }
 
 .footer_index-page {
   margin-top: -120px;
   z-index: 3;
-  position: relative;
+  position: relative
 }
 
 .footer-contacts {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  padding-right: 20px;
+  padding-right: 20px
 }
 
 .footer-contacts p:first-child {
   margin-top: 23px;
-  margin-bottom: 9px;
+  margin-bottom: 9px
 }
 
 .footer-social {
   justify-self: center;
-  align-self: center;
+  align-self: center
 }
 
 .social-list {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: flex;
-  margin-right: -6px;
+  margin: 0 -6px 0 0
 }
 
 .social-link {
@@ -429,142 +444,100 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.social-link {
   background-color: var(--acсent);
-  text-decoration: none;
+  text-decoration: none
 }
 
 .social-link:hover {
-  background-color: var(--acсent-dark);
+  background-color: var(--acсent-dark)
 }
 
 .social-link:active,
 .social-link:focus {
-  background-color: var(--acсent-extra-dark);
+  background-color: var(--acсent-extra-dark)
 }
 
 .copyright {
   display: flex;
   align-items: center;
-  padding-left: 87px;
+  padding-left: 87px
 }
 
 .copyright-content {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
-  margin-right: 10px;
+  margin-right: 10px
 }
 
 .copyright-link:hover path {
-  fill: var(--acсent);
+  fill: var(--acсent)
 }
 
 .copyright-link:active path,
 .copyright-link:focus path {
-  fill: var(--html-logo);
+  fill: var(--html-logo)
 }
-
-/* Form-modal */
 
 .modal-search {
   width: 568px;
   height: 395px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
   padding: 55px;
   position: absolute;
   background: var(--basic-white);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
   top: 0;
   left: calc(50% - 284px);
-  display: none;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-395px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+  display: none
 }
 
 .modal-show {
   display: block;
   animation-name: bounce;
-  animation-duration: 0.6s;
-}
-
-@keyframes shake {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
+  animation-duration: .6s
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  animation: shake .6s
 }
 
 .search-hotel-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .form-line {
   margin-bottom: 30px;
   display: flex;
   line-height: 38px;
-  position: relative;
+  position: relative
 }
 
-
 .icon-calendar {
-  position: absolute;
   right: 8px;
-  top: 7px;
+  top: 7px
 }
 
 .search-hotel-form label {
-  width: 112px;
+  width: 112px
 }
 
 .input_custom {
   background-color: var(--input-background);
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
   font: inherit;
-  text-transform: uppercase;
+  text-transform: uppercase
 }
 
 .input_dates {
   width: calc(100% - 112px);
   padding-left: 13px;
-  padding-right: 13px;
+  padding-right: 13px
 }
 
 .input-button {
@@ -573,55 +546,53 @@ img {
   line-height: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center
 }
 
 .input-button:hover path,
 .input-button:hover rect {
-  fill: var(--basic-black);
+  fill: var(--basic-black)
 }
 
 .input-button:active path,
 .input-button:active rect {
-  fill: var(--acсent);
+  fill: var(--acсent)
 }
 
 .input_people {
   width: 33%;
-
-  text-align: center;
+  text-align: center
 }
 
 .label-for-children {
   text-align: end;
-  padding-right: 25px;
+  padding-right: 25px
 }
 
 .input_custom::-webkit-input-placeholder {
-  color: var(--basic-black);
+  color: var(--basic-black)
 }
 
 .input_custom::-moz-placeholder {
-  color: var(--basic-black);
+  color: var(--basic-black)
 }
 
-
 .icon-calendar:hover path {
-  fill: var(--basic-black);
+  fill: var(--basic-black)
 }
 
 .icon-calendar:active path {
-  fill: var(--acсent);
+  fill: var(--acсent)
 }
 
 .search-hotel-form input:hover {
-  background-color: var(--input-hover);
+  background-color: var(--input-hover)
 }
 
 .search-hotel-form input:active,
 .search-hotel-form input:focus {
   background-color: transparent;
-  outline: solid 2px #E5E5E5;
+  outline: solid 2px #e5e5e5
 }
 
 .modal-button {
@@ -630,83 +601,79 @@ img {
   padding-top: 16px;
   padding-bottom: 16px;
   text-transform: uppercase;
-  margin-top: 24px;
+  margin-top: 24px
 }
 
 .modal-button:hover {
-  background-color: var(--acсent-dark);
+  background-color: var(--acсent-dark)
 }
 
 .modal-button:active,
 .modal-button:focus {
   background-color: var(--acсent-extra-dark);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, .3)
 }
 
 .input_custom {
-  position: relative;
+  position: relative
 }
 
 .icon-calendar {
-  position: absolute;
+  position: absolute
 }
 
 .adults_group_field-wrapper,
 .children_group_field-wrapper {
   width: calc(50% - 112px);
-  display: flex;
-  /* align-items: center; */
+  display: flex
 }
 
-
-/* Catalog */
 .filters {
   background-color: var(--acсent);
   background-image: url(../img/background-catalog.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--basic-white);
+  color: var(--basic-white)
 }
 
 .filters-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 26px 72px 7px;
+  padding: 26px 72px 7px
 }
 
 .filters-form fieldset {
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 .infrastructure-and-hoteltype {
   display: grid;
   grid-template-columns: 250px 1fr;
-  justify-self: start;
+  justify-self: start
 }
 
 .form-section-title {
-  margin-bottom: 24px;
+  margin-bottom: 24px
 }
 
 .form-section-title_cost {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .hotel-type-list,
 .infrastructure-list {
   margin: 0;
-  padding: 0;
-  padding-left: 38px;
-  list-style: none;
+  padding: 0 0 0 38px;
+  list-style: none
 }
 
 .filter-option {
-  margin-bottom: 25px;
+  margin-bottom: 25px
 }
 
 .label-checkbox {
-  position: relative;
+  position: relative
 }
 
 .label-checkbox::before {
@@ -714,11 +681,11 @@ img {
   position: absolute;
   width: 23px;
   height: 23px;
-  background-image: url("../img/icons/checkbox-off.svg");
+  background-image: url(../img/icons/checkbox-off.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   left: -39px;
-  top: -2px;
+  top: -2px
 }
 
 .input-checkbox:checked+.label-checkbox::before {
@@ -726,11 +693,11 @@ img {
   position: absolute;
   width: 27px;
   height: 23px;
-  background-image: url("../img/icons/checkbox-on.svg");
+  background-image: url(../img/icons/checkbox-on.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   left: -39px;
-  top: -2px;
+  top: -2px
 }
 
 .cost {
@@ -738,25 +705,25 @@ img {
   width: 317px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
 .cost-input {
-  background: transparent;
-  border: none;
+  background: 0 0;
+  border: 0;
   font: inherit;
   font-size: inherit;
   color: var(--basic-white);
   text-transform: uppercase;
-  text-align: center;
+  text-align: center
 }
 
 .cost-input::-webkit-input-placeholder {
-  color: var(--basic-white);
+  color: var(--basic-white)
 }
 
 .cost-input::-moz-placeholder {
-  color: var(--basic-white);
+  color: var(--basic-white)
 }
 
 .price-controls {
@@ -764,55 +731,48 @@ img {
   border-radius: 2px;
   display: flex;
   align-items: center;
-  min-height: 36px;
-
+  min-height: 36px
 }
 
 .devider {
   width: 2px;
   height: 22px;
-  background-color: var(--basic-white);
+  background-color: var(--basic-white)
 }
 
 .range-controls {
-  position: relative;
+  position: relative
 }
 
 .scale {
   height: 2px;
-  background-color: #999999;
+  background-color: #999;
   margin-top: 20px;
-  margin-bottom: 33px;
+  margin-bottom: 33px
+}
+
+.bar,
+.filters-button:hover {
+  background-color: var(--basic-white)
 }
 
 .bar {
-  height: 2px;
-  background-color: var(--basic-white);
-  /* width: 80%; */
+  height: 2px
 }
 
 .toggle {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: #ABABAB;
+  background-color: #ababab;
   border-radius: 50%;
   border: 8px solid var(--basic-white);
-  /* box-shadow: 0 2px 1px 0 #cfcfcf; */
   top: -9px;
-  box-sizing: content-box;
-
+  box-sizing: content-box
 }
-
-.toggle-max {
-  /* left: 240px; */
-}
-
-
-
 
 .filters-button {
-  background: transparent;
+  background: 0 0;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   font: inherit;
@@ -820,61 +780,58 @@ img {
   line-height: 36px;
   padding-right: 10px;
   padding-left: 10px;
-  min-width: 137px;
-
+  min-width: 137px
 }
 
 .filters-button:hover {
-  background-color: var(--basic-white);
-  color: var(--basic-black);
+  color: var(--basic-black)
 }
 
 .form-section {
-  border: none;
+  border: 0
 }
 
 .form-section-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 21px
 }
 
-/* Search-results */
 .search-results-list {
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 .search-results-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 30px 72px;
+  padding: 30px 72px
 }
 
 .search-results-wrapper {
   display: grid;
   grid-template-columns: 135px 1fr;
-  column-gap: 29px;
+  column-gap: 29px
 }
 
 .seach-results-content {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-rows: min-content 1fr 27px;
-  column-gap: 6px;
+  column-gap: 6px
 }
 
 .search-item-title {
   grid-column: 1/-1;
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 .search-results-number {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: var(--basic-black);
+  color: var(--basic-black)
 }
 
 .rating {
@@ -882,106 +839,96 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-end
 }
 
-/*sorting*/
 .sorting-wrapper {
   display: grid;
   grid-template-columns: 1fr max-content;
-  padding: 28px 72px 34px;
+  padding: 28px 72px 34px
 }
 
 .sorting {
   display: grid;
   grid-template-columns: 135px 1fr;
   column-gap: 29px;
-  align-items: center;
+  align-items: center
 }
 
 .sorting-filters {
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-black);
-  display: flex;
+  display: flex
 }
 
 .sorting-title {
   font-size: 12px;
   line-height: 18px;
-  font-weight: normal;
-}
-
-.sorting-title {
-  margin: 0;
+  font-weight: 400;
   padding: 0;
-  margin-right: 40px;
+  margin: 0 40px 0 0
 }
 
 .sorting-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex
 }
 
 .sorting-item {
-  /* opacity: 30%; */
   color: #b3b3b3;
   margin-right: 32px;
   text-decoration-line: underline;
   text-decoration-color: var(--acсent);
-  text-decoration-style: dotted;
+  text-decoration-style: dotted
 }
 
 .sorting-item_active {
   color: var(--acсent);
   opacity: 100%;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .sorting-arrow {
-  text-decoration: none;
+  text-decoration: none
 }
 
 .sorting-arrow:not(:last-child) {
-  margin-right: 12px;
+  margin-right: 12px
 }
 
 .sorting-arrow:hover path {
-  fill: var(--basic-black);
-}
-
-.sorting-arrow:active path {
-  fill: var(--acсent);
+  fill: var(--basic-black)
 }
 
 .sort-current path,
-.sort-current:hover path {
-  fill: var(--acсent);
+.sort-current:hover path,
+.sorting-arrow:active path {
+  fill: var(--acсent)
 }
 
 .search-results-list {
-  list-style: none;
+  list-style: none
 }
 
 .search-results-item {
   font-size: 14px;
   line-height: 21px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5
 }
 
 .search-results-item:last-child {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5
 }
 
 .search-item-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: var(--basic-black);
+  color: var(--basic-black)
 }
-
 
 .details-button {
   background-color: var(--acсent);
@@ -989,17 +936,17 @@ img {
   font-size: 14px;
   padding-right: 17px;
   padding-left: 17px;
-  line-height: 27px;
+  line-height: 27px
 }
 
 .details-button:hover {
-  background-color: var(--acсent-dark);
+  background-color: var(--acсent-dark)
 }
 
 .details-button:active,
 .details-button:focus {
   background-color: var(--acсent-extra-dark);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, .3)
 }
 
 .book-button {
@@ -1009,18 +956,17 @@ img {
   padding-left: 17px;
   line-height: 27px;
   text-transform: uppercase;
-  justify-self: left;
+  justify-self: left
 }
 
 .book-button:hover {
-  background-color: var(--btn-dark);
+  background-color: var(--btn-dark)
 }
 
 .book-button:active,
 .book-button:focus {
   background-color: var(--btn-extra-dark);
-  color: rgba(255, 255, 255, 0.3);
-  /*как записать через кастомные */
+  color: rgba(255, 255, 255, .3)
 }
 
 .rating-value {
@@ -1029,5 +975,5 @@ img {
   padding-right: 12px;
   height: 27px;
   line-height: 27px;
-  background-color: var(--input-background);
+  background-color: var(--input-background)
 }
