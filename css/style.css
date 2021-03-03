@@ -690,7 +690,7 @@ img {
 .filters-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 26px 72px 32px;
+  padding: 26px 72px 7px;
 }
 
 .filters-form fieldset {
@@ -706,6 +706,10 @@ img {
 
 .form-section-title {
   margin-bottom: 24px;
+}
+
+.form-section-title_cost {
+  margin-bottom: 10px;
 }
 
 .hotel-type-list,
@@ -904,7 +908,7 @@ img {
 .sorting-wrapper {
   display: grid;
   grid-template-columns: 1fr max-content;
-  padding: 31px 72px 37px;
+  padding: 28px 72px 34px;
 }
 
 .sorting {
