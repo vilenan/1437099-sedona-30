@@ -112,7 +112,7 @@ img {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 227px 1fr 1fr 227px;
   grid-template-rows: 56px;
 }
 
@@ -260,7 +260,7 @@ img {
 }
 
 .town-features-item {
-  padding: 60px 52px 82px;
+  padding: 59px 52px 78px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,7 +306,7 @@ img {
 }
 
 .rest-advantages-item {
-  padding: 47px 52px 54px;
+  padding: 47px 71px 54px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -336,6 +336,7 @@ img {
 .hotel-search-title {
   font-size: 30px;
   line-height: 24px;
+  margin-bottom: 31px;
 }
 
 .hotel-search-content {
@@ -343,7 +344,7 @@ img {
   line-height: 24px;
   width: 435px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .button {
@@ -402,9 +403,13 @@ img {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  justify-self: center;
-  align-self: center;
+  text-align: center;
+  padding-right: 20px;
+}
 
+.footer-contacts p:first-child {
+  margin-top: 23px;
+  margin-bottom: 9px;
 }
 
 .footer-social {
@@ -444,10 +449,9 @@ img {
 }
 
 .copyright {
-  justify-self: center;
-  align-self: center;
   display: flex;
   align-items: center;
+  padding-left: 87px;
 }
 
 .copyright-content {
@@ -585,6 +589,10 @@ img {
 .input-button {
   width: 33%;
   background-color: var(--input-background);
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-button:hover path,
@@ -886,6 +894,10 @@ img {
 
 .rating {
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 /*sorting*/
@@ -941,6 +953,27 @@ img {
   color: var(--acсent);
   opacity: 100%;
   text-decoration: none;
+}
+
+.sorting-arrow {
+  text-decoration: none;
+}
+
+.sorting-arrow:not(:last-child) {
+  margin-right: 12px;
+}
+
+.sorting-arrow:hover path {
+  fill: var(--basic-black);
+}
+
+.sorting-arrow:active path {
+  fill: var(--acсent);
+}
+
+.sort-current path,
+.sort-current:hover path {
+  fill: var(--acсent);
 }
 
 .search-results-list {
