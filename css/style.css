@@ -352,7 +352,6 @@ img {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-white);
-  outline: none;
 }
 
 .form-appearance-button {
@@ -367,7 +366,6 @@ img {
   background-color: var(--btn-dark);
 }
 
-.form-appearance-button:active,
 .form-appearance-button:focus {
   background-color: var(--btn-extra-dark);
   color: rgba(255, 255, 255, 0.3);
@@ -581,14 +579,13 @@ img {
   fill: var(--basic-black);
 }
 
-.input-button:active path,
-.input-button:active rect {
+.input-button:focus path,
+.input-button:focus rect {
   fill: var(--acсent);
 }
 
 .input_people {
   width: 33%;
-
   text-align: center;
 }
 
@@ -733,6 +730,10 @@ img {
   top: -2px;
 }
 
+.input-checkbox:disabled+.label-checkbox::before {
+  opacity: 0.3;
+}
+
 .cost {
   justify-self: end;
   width: 317px;
@@ -798,10 +799,15 @@ img {
   background-color: #ABABAB;
   border-radius: 50%;
   border: 8px solid var(--basic-white);
-  /* box-shadow: 0 2px 1px 0 #cfcfcf; */
+  box-shadow: 0 2px 0 0 rgba(171, 171, 171, 0.3);
   top: -9px;
   box-sizing: content-box;
+}
 
+.toggle:hover,
+.toggle:focus {
+  border: 10px solid var(--basic-white);
+  top: -11px;
 }
 
 .toggle-max {
@@ -821,7 +827,8 @@ img {
 
 }
 
-.filters-button:hover {
+.filters-button:hover,
+.filters-button:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
@@ -865,6 +872,22 @@ img {
   grid-column: 1/-1;
   margin: 0;
   padding: 0;
+}
+
+.search-item-link {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-item-link:hover {
+  color: var(--acсent);
+}
+
+.search-item-link:active,
+.search-item-link:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 .search-results-number {
@@ -935,10 +958,25 @@ img {
   text-decoration-style: dotted;
 }
 
+.sorting-item:hover {
+  color: var(--acсent);
+}
+
+.sorting-item:active,
+.sorting-item:focus {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
 .sorting-item_active {
   color: var(--acсent);
   opacity: 100%;
   text-decoration: none;
+}
+
+.sorting-item_active:active,
+.sorting-item_active:focus {
+  color: var(--acсent);
 }
 
 .sorting-arrow {
@@ -953,7 +991,8 @@ img {
   fill: var(--basic-black);
 }
 
-.sorting-arrow:active path {
+.sorting-arrow:active path,
+.sorting-arrow:focus path {
   fill: var(--acсent);
 }
 
