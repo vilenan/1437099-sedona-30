@@ -743,6 +743,10 @@ iframe {
   opacity: 0.3;
 }
 
+.input-checkbox:focus+.label-checkbox::before {
+  transform: scale(1.5);
+}
+
 .cost {
   justify-self: end;
   width: 317px;
@@ -1061,6 +1065,7 @@ iframe {
   line-height: 27px;
   text-transform: uppercase;
   justify-self: left;
+  text-decoration: none;
 }
 
 .book-button:hover {
