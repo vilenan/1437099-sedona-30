@@ -162,7 +162,7 @@ img {
 
 .welcome::after {
   content: "";
-  background-image: url("../img/Shape-mask.png");
+  background-image: url("../img/shape-mask.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
@@ -409,6 +409,11 @@ iframe {
 .footer-contacts p:first-child {
   margin-top: 23px;
   margin-bottom: 9px;
+}
+
+.footer-contacts a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-social {
