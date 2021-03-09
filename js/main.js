@@ -1,4 +1,4 @@
-// 'use strict';
+
 const popupShowButton = document.querySelector('.form-appearance-button');
 const popup = document.querySelector('.modal-search'); //найдем попап
 const formSearchHotel = popup.querySelector('.search-hotel-form'); //найдем форму
@@ -23,7 +23,7 @@ try {
 
 
 //появление попапа и фокусировка
-popupShowButton.addEventListener('click', function () {
+popupShowButton.addEventListener('click', function (evt) {
   if (popup.classList.contains('modal-show')) {
     popup.classList.remove('modal-show');
     popup.classList.remove('modal-error');
@@ -33,7 +33,7 @@ popupShowButton.addEventListener('click', function () {
     formAdults.value = localStorage.getItem('adults');
     formChildren.value = localStorage.getItem('children');
   }
-
+  evt.preventDefault();
 });
 
 formSearchHotel.addEventListener('submit', function (evt) {
