@@ -360,6 +360,7 @@ img {
   text-align: center;
   width: 568px;
   z-index: 5;
+  text-decoration: none;
 }
 
 .form-appearance-button:hover {
