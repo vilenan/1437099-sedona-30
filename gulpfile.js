@@ -7,6 +7,7 @@ const rename = require('gulp-rename');
 const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const del = require('del');
+const terser = require("gulp-terser");
 
 //HTML
 const html = () => {
@@ -15,6 +16,16 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 exports.html = html;
+
+// Script
+const script = () => {
+  return gulp.src('source/js/main.js')
+    .pipe(terser())
+    .pipe(rename('main.min.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(browserSync.stream());
+}
+exports.script = script;
 
 // Styles
 const cssminify = () => {
@@ -94,6 +105,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/css/style.css", gulp.series(cssminify));
+  gulp.watch("source/js/main.js", gulp.series(script));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -106,6 +118,7 @@ const build = gulp.series(
   gulp.parallel(
     cssminify,
     html,
+    script,
     createWebp
   ),
 );
@@ -120,6 +133,7 @@ exports.default = gulp.series(
   gulp.parallel(
     cssminify,
     html,
+    script,
     createWebp
   ),
   gulp.series(
