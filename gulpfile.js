@@ -41,7 +41,7 @@ exports.cssminify = cssminify;
 
 //Images
 const minImages = ()=> {
-  return gulp.src('source/img/**/*.{jpg,png,svg')
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
 }
